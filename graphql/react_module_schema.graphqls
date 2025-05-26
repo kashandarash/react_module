@@ -1,0 +1,50 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Query {
+    TodoItems(
+        offset: Int = 0
+        limit: Int = 1000
+    ): TodoItems!
+}
+
+type TodoItem {
+    id: String!
+    title: String
+    completed: Boolean
+}
+
+type TodoItems {
+    total: Int!
+    items: [TodoItem!]
+}
+
+# The Int, Float, String, Boolean, and ID Scalar types are built into GraphQL,
+# here we are defining your own custom scalars for violations.
+scalar Violation
+
+interface Response {
+    errors: [Violation]
+}
+
+# Response can be used for mutations.
+type TodoItemResponse implements Response {
+    errors: [Violation]
+    item: TodoItem
+}
+
+# Define input to use as parameter for mutations, we can not use objects "type" there.
+input TodoItemInput {
+    id: String
+    title: String!
+    completed: Boolean
+}
+
+# Defining mutations.
+type Mutation {
+    CreateTodoItem(data: TodoItemInput!): TodoItemResponse
+    DeleteTodoItem(data: String): Boolean
+    UpdateTodoItem(data: TodoItemInput): TodoItemResponse
+}

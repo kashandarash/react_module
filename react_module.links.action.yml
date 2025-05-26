@@ -1,0 +1,5 @@
+react_module_todo_item.add_form:
+  title: 'Add todo item'
+  route_name: entity.react_module_todo_item.add_form
+  appears_on:
+    - entity.react_module_todo_item.collection

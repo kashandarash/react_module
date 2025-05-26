@@ -1,0 +1,11 @@
+administer todo item:
+  title: 'Administer todo item settings'
+  restrict access: true
+delete todo item:
+  title: Delete todo item
+create todo item:
+  title: Create todo item
+view todo item:
+  title: View todo item
+edit todo item:
+  title: Edit todo item

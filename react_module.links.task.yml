@@ -1,0 +1,5 @@
+entity.react_module_todo_item.collection:
+  title: 'Todo Items'
+  route_name: entity.react_module_todo_item.collection
+  base_route: system.admin_content
+  weight: 10

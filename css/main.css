@@ -1,0 +1,25 @@
+#root-react .list .todo-item {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#root-react .new-item-form {
+    display: flex;
+}
+
+#root-react .some-message {
+    padding: 10px;
+    width: fit-content;
+}
+
+#root-react .total {
+    background-color: lightblue;
+}
+
+#root-react .status, #root-react .loading {
+    background-color: lightgreen;
+}
+
+#root-react .error {
+    background-color: lightcoral;
+}

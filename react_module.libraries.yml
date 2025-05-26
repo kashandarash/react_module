@@ -1,0 +1,10 @@
+# Custom module library for general purposes.
+app:
+  js:
+    js/dist/main.js: {}
+  css:
+    component:
+      # React component above could have own styles but for couple lines let's create separate styles, Drupal adapted.
+      css/main.css: {}
+  dependencies:
+    - core/drupalSettings
