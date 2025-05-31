@@ -3,8 +3,8 @@ ABOUT
 The main goal of this module is to create a block that has a Rect app inside.
 This way we are testing a possibility to have an atomic decoupled component that can be used independently in any part of the site.
 The React app communicates with the backend by GraphQL endpoints (./graphqls/react_module_schema.graphqls and ./src/Plugin/GraphQL/*).
-This architecture can allow to the use of same app inside the Drupal or in externally, for example in mobile app.
-The only difference is that we have to handle user authentication (in our case app will have site cookies).
+This architecture can allow the use of the same app inside the Drupal or externally, for example in mobile app.
+The only difference is that we have to handle user authentication separately (in our case app will have site cookies).
 Please check ./js/README.md for the app details.
 
 INSTALL

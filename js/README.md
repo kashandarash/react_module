@@ -1,7 +1,7 @@
 DESCRIPTION
 --------------
 This is a test React application.
-The app provides a simple todo list where you can create/delete items, and check every item as done.  
+The app provides a simple todo list where you can create/delete items, and mark every item as completed.  
 It communicated with a server using GraphQL protocol.
 App files and all code are in ./src, built js file is in ./dis/main.js.
 We are using minimal GraphQL client (graphql-request) instead of more advanced (like 'Apollo') because we need very limited and simple actions.  
