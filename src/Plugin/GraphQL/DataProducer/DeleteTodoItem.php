@@ -65,6 +65,10 @@ class DeleteTodoItem extends DataProducerPluginBase implements ContainerFactoryP
     // Sleep to see "Loading..." message (solo for testing).
     //sleep(1);
 
+    if (!$this->currentUser->hasPermission("delete todo item")) {
+      return FALSE;
+    }
+
     $entity = $this->entityTypeManager->getStorage('react_module_todo_item')->loadByProperties([
       'uid' => $this->currentUser->id(),
       'uuid' => $id,

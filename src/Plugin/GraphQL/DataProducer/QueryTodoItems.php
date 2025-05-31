@@ -8,7 +8,6 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\graphql\Plugin\GraphQL\DataProducer\DataProducerPluginBase;
 use Drupal\react_module\Wrappers\QueryConnection;
-use GraphQL\Error\Error;
 use GraphQL\Error\UserError;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 

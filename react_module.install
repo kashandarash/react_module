@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function react_module_install(): void {
+  $permissions = [
+    'create todo item',
+    'delete todo item',
+    'update todo item',
+    'view todo item',
+    'execute react_app_endpoint arbitrary graphql requests',
+  ];
+  // Add permission to authenticated role.
+  user_role_grant_permissions('verified', $permissions);
+
+  // Add the same permissions to anonymous role.
+  // To have a possibility to test and run react app standalone.
+  user_role_grant_permissions('anonymous', $permissions);
+}

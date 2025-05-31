@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\react_module;
+namespace Drupal\react_module\Entity;
 
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityChangedInterface;

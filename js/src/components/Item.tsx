@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-// Define Todo object.
+// Define the object.
 export interface Todo {
     id: string;
     title: string;

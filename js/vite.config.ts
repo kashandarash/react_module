@@ -9,7 +9,8 @@ export default defineConfig({
       output: {
         // Customize JS file names
         entryFileNames: 'main.js',
-        assetFileNames: 'main.css',
+        // Customize CSS file names
+        // assetFileNames: 'main.css',
       },
     },
   },

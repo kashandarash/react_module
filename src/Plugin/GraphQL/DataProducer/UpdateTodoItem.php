@@ -69,7 +69,7 @@ class UpdateTodoItem extends DataProducerPluginBase implements ContainerFactoryP
     //sleep(1);
 
     $response = new TodoResponse();
-    if ($this->currentUser->hasPermission("edit todo item")) {
+    if ($this->currentUser->hasPermission('update todo item')) {
       try {
         // ID in our case is Drupal UUID.
         $entity = $this->entityTypeManager->getStorage('react_module_todo_item')->loadByProperties([

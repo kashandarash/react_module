@@ -7,5 +7,5 @@ create todo item:
   title: Create todo item
 view todo item:
   title: View todo item
-edit todo item:
-  title: Edit todo item
+update todo item:
+  title: Update todo item

@@ -35,6 +35,7 @@ export default function App() {
         }
     }
 
+    // Defining function to delete item.
     const deleteTodo = async (id: string) => {
         try {
             await request(SETTINGS.graphql_url, DELETE_TODO_ITEM, { data: id });
@@ -50,6 +51,7 @@ export default function App() {
         }
     };
 
+    // Defining function to get all items.
     const fetchTodoItems = async () => {
         try {
             const data = await request<TodoItemsResponse>(SETTINGS.graphql_url, GET_TODO_ITEMS);
@@ -67,13 +69,14 @@ export default function App() {
             // Show user human-readable message.
             setError('Error happened, please reload the page.')
             setMessage(null)
-            // Print error to console.log (Some error ((() or full error.
+            // Print error to console.log ("Some error (((") or full error.
             console.log(err.response?.errors?.[0]?.message || err);
         } finally {
             setIsLoading(false);
         }
     };
 
+    // Defining function to create item.
     const addTodo = async (title: string) => {
         setIsLoading(true);
         try {

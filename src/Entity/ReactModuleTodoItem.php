@@ -7,7 +7,6 @@ use Drupal\Core\Entity\EntityChangedTrait;
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
-use Drupal\react_module\ReactModuleTodoItemInterface;
 use Drupal\user\EntityOwnerTrait;
 
 /**
@@ -27,11 +26,6 @@ use Drupal\user\EntityOwnerTrait;
  *     "list_builder" = "Drupal\react_module\ReactModuleTodoItemListBuilder",
  *     "views_data" = "Drupal\views\EntityViewsData",
  *     "access" = "Drupal\react_module\ReactModuleTodoItemAccessControlHandler",
- *     "form" = {
- *       "add" = "Drupal\react_module\Form\ReactModuleTodoItemForm",
- *       "edit" = "Drupal\react_module\Form\ReactModuleTodoItemForm",
- *       "delete" = "Drupal\Core\Entity\ContentEntityDeleteForm",
- *     },
  *     "route_provider" = {
  *       "html" = "Drupal\react_module\Routing\ReactModuleTodoItemHtmlRouteProvider",
  *     }
@@ -46,10 +40,6 @@ use Drupal\user\EntityOwnerTrait;
  *   },
  *   links = {
  *     "collection" = "/admin/content/react-module-todo-item",
- *     "add-form" = "/react-module-todo-item/add",
- *     "canonical" = "/react-module-todo-item/{react_module_todo_item}",
- *     "edit-form" = "/react-module-todo-item/{react_module_todo_item}",
- *     "delete-form" = "/react-module-todo-item/{react_module_todo_item}/delete",
  *   },
  * )
  */

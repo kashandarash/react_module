@@ -73,14 +73,14 @@ class ReactModuleTodoItemListBuilder extends EntityListBuilder {
     $header['uid'] = $this->t('Author');
     $header['created'] = $this->t('Created');
     $header['changed'] = $this->t('Updated');
-    return $header + parent::buildHeader();
+    return $header;
   }
 
   /**
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
-    /** @var \Drupal\react_module\ReactModuleTodoItemInterface $entity */
+    /** @var \Drupal\react_module\Entity\ReactModuleTodoItemInterface $entity */
     $row['id'] = $entity->id();
     $row['label'] = $entity->label();
     $row['status'] = $entity->get('status')->value ? $this->t('Enabled') : $this->t('Disabled');
@@ -90,7 +90,7 @@ class ReactModuleTodoItemListBuilder extends EntityListBuilder {
     ];
     $row['created'] = $this->dateFormatter->format($entity->get('created')->value);
     $row['changed'] = $this->dateFormatter->format($entity->getChangedTime());
-    return $row + parent::buildRow($entity);
+    return $row;
   }
 
 }

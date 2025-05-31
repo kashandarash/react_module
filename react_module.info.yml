@@ -1,4 +1,4 @@
-name: react_module
+name: React module
 type: module
 description: Provides a Drupal module with a block. The block contains a React library with a TODO list that communicates with the site owner's GraphQL.
 package: Custom

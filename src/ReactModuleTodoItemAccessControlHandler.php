@@ -17,28 +17,17 @@ class ReactModuleTodoItemAccessControlHandler extends EntityAccessControlHandler
    */
   protected function checkAccess(EntityInterface $entity, $operation, AccountInterface $account) {
 
-    switch ($operation) {
-      case 'view':
-        return AccessResult::allowedIfHasPermission($account, 'view todo item');
-
-      case 'update':
-        return AccessResult::allowedIfHasPermissions(
-          $account,
-          ['edit todo item', 'administer todo item'],
-          'OR',
-        );
-
-      case 'delete':
-        return AccessResult::allowedIfHasPermissions(
-          $account,
-          ['delete todo item', 'administer todo item'],
-          'OR',
-        );
-
-      default:
-        // No opinion.
-        return AccessResult::neutral();
+    // Allow all for admin user.
+    if ($account->hasPermission('administer todo item')) {
+      return AccessResult::allowed();
     }
+
+    return match ($operation) {
+      'view' => AccessResult::allowedIfHasPermission($account, 'view todo item'),
+      'update' => AccessResult::allowedIfHasPermission($account, 'update todo item'),
+      'delete' => AccessResult::allowedIfHasPermission($account, 'delete todo item'),
+      default => AccessResult::neutral(),
+    };
 
   }
 

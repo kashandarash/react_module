@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies: {  }
+name: react_app_endpoint
+label: 'React App Endpoint'
+endpoint: /graphql/todo
+debug_flag: 0
+schema: react_module_schema
+caching: false
+batching: false
+disable_introspection: false
+query_depth: null
+query_complexity: null
+schema_configuration:
+  composable:
+    extensions:
+      composable_extension: 0
+persisted_queries_settings: {  }
