@@ -8,6 +8,7 @@ interface Props {
     deleteTodo: (id: string) => void
 }
 
+// Defining a list of items.
 export default function ItemsList({todos, deleteTodo, toggleTodo}: Props) {
     // Method "map" will iterate for each item from todos array.
     return (

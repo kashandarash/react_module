@@ -2,6 +2,7 @@
 import {gql} from "graphql-request";
 import {Todo} from "../components/Item";
 
+// Create constant for the query.
 export const GET_TODO_ITEMS = gql`
     query TodoItems {
         TodoItems {
@@ -15,6 +16,7 @@ export const GET_TODO_ITEMS = gql`
     }
 `;
 
+// Object that we expect in response above.
 export type TodoItemsResponse = {
     TodoItems: {
         items: Todo[];

@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-// Define the object.
+// Define the single item object.
 export interface Todo {
     id: string;
     title: string;
@@ -14,6 +14,7 @@ interface Props {
     deleteTodo: (id: string) => void
 }
 
+// Defining a single item that contains checkbox, label and remove button.
 export default function Item({todo, toggleTodo, deleteTodo}: Props) {
     const [deleting, setDeleting] = useState<boolean>(false);
     const [updating, setUpdating] = useState<boolean>(false);

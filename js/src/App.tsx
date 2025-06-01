@@ -101,6 +101,7 @@ export default function App() {
         fetchTodoItems();
     }, []);
 
+    // Confining all components and building final app.
     return (
         <>
             <NewItemForm onSubmit={addTodo} />

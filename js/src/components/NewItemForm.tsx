@@ -5,6 +5,7 @@ interface Props {
     onSubmit: (title: string) => void;
 }
 
+// Defining form to add a new item.
 export default function NewItemForm({ onSubmit }: Props) {
 
     // Using states for variables [variableName, functionToSet] = useState(initialValue).

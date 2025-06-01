@@ -1,19 +1,14 @@
 import { gql } from 'graphql-request';
 import {Todo} from "../components/Item";
 
+// Constants for the delete query.
 export const DELETE_TODO_ITEM = gql`
     mutation DeleteTodoItem($data: String!) {
         DeleteTodoItem(data: $data)
     }
 `;
 
-export type TodoItemResponse = {
-    CreateTodoItem: {
-        errors: []
-        item: Todo
-    };
-};
-
+// Constants for the create query.
 export const CREATE_TODO_ITEM = gql`
     mutation CreateTodoItem($data: String!) {
         CreateTodoItem(data: { title: $data }) {
@@ -27,6 +22,7 @@ export const CREATE_TODO_ITEM = gql`
     }
 `;
 
+// Constants for the update query.
 export const UPDATE_TODO_ITEM = gql`
     mutation UpdateTodoItem($id: String!, $title: String!, $completed: Boolean!) {
         UpdateTodoItem(data: { id: $id, title: $title, completed: $completed}) {
@@ -39,3 +35,11 @@ export const UPDATE_TODO_ITEM = gql`
         }
     }
 `;
+
+// Object that we expect in response.
+export type TodoItemResponse = {
+    CreateTodoItem: {
+        errors: []
+        item: Todo
+    };
+};
